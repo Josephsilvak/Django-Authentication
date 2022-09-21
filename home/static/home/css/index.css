@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    background-color: #151419;
+}
+
+li.atualPage{
+    height: 45px;
+    color: rgb(146 146 146) !important;
+    background-color: rgb(38, 43, 53);
+}
+
+.wrap h2{
+    color: #ebcd95;
+    font-size: 5em;
+    position: absolute;
+    top: calc(50% - 25px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**** NavBar ****/
+.container{
+    margin: 0 auto;
+    max-width: 1080px;
+    position: relative;
+}
+
+header{
+    width: 100%;
+    height: 45px;
+    background-color: #181c22;
+    background-attachment: fixed;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.678);
+}
+
+header .tigerLogo{
+    width: 75px;
+    top: 13px;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+}
+
+header .navbar {
+    top: 0;
+    right: 17px;
+    position: absolute;
+}
+
+header .navbar ul{
+    display: inline-block;
+    list-style-type: none;
+}
+
+header .navbar a{ color: rgb(78, 78, 78); }
+header .navbar a:hover{ color: rgb(129, 129, 129);}
+
+header .navbar li{
+    float: left;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 0 15px;
+    line-height: 45px;
+    font-family: 'Roboto', sans-serif;
+}
+
+a#contaOuLog{
+    cursor: pointer;
+}
+
+li.atualPage{
+    height: 45px;
+    color: rgb(146 146 146) !important;
+    background-color: rgb(38, 43, 53);
+}
+
+header .navbar li img{
+    width: 25px;
+    top: 4px;
+    left: 0px;
+    position: relative;
+}

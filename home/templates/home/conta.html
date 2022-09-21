@@ -1,0 +1,29 @@
+{% load static %}
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title>{%block title%}Conta{%endblock%}</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet"      type="text/css" href="{% static 'home/css/conta.css' %}">
+        <link rel="stylesheet"      type="text/css" href="{% static 'home/css/normalize.css' %}">
+        <meta name="viewport"       content="width=device-width, initial-scale=1.0">
+        <meta name="author"         content="autor do site">
+        <meta name="keywords"       content="palavras-separadas,por,virgula">
+        <meta name="description"    content="descrição do site">
+        <link rel="icon" type="image/png" href="logo/icon.png"/>
+    </head>
+    <body>
+        {%block content%}
+
+            {% include 'partials/nav.html' %}
+            
+            <section >
+                <div class="info">
+                    <h2 id="userName">Bem-vindo(a) ao seu perfil <span class="username">{{user}}</span>!</h2>
+                    <a href="{%url 'home:logout'%}" class="button-inter item9"><span></span><span></span><span></span><span></span>SAIR DA CONTA</a>
+                </div>
+            </section>
+        {%endblock%}
+    </body>
+    <script src="script/script.js"></script>
+</html>

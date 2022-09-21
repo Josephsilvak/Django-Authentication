@@ -1,0 +1,257 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html{
+    height: 100%;
+}
+
+main{
+    display: flex;
+    position: relative;
+    height: 100%;
+    background-color: #151419;
+}
+
+section{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: calc(50% + 2%);
+    left: 50%;
+    width: 95%;
+    max-width: 720px;
+    height: 450px;  
+    border: 1px solid wheat;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.815);
+    transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+.log-left{
+    position: relative;
+    width: 50%;
+    background-image: url('../img/paper.png');
+    background-size: contain;
+}
+
+
+.log-right{
+    position: relative;
+    width: 50%;
+}
+
+.log-right::after{
+    content: '';
+    padding: 100px 0;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    border: 0.1px solid #e6c68c;
+    transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+}
+
+
+.box h2{
+    opacity: inherit;
+    text-align: center;
+    color: white;
+    margin: 25px 20px;
+    opacity: 0.6;
+    font-size: 1.8em;
+    cursor: context-menu;
+    text-transform: uppercase;
+}
+
+.cad-wrapper{ padding: 25px 30px; }
+
+/* formulário do Log e Cad */
+.label-float{
+    position: relative;
+    top: -40px;
+    padding-top: 18px;
+    margin-top: 30px;
+}
+
+.label-float label{
+    position: absolute;
+    top: 0px;
+    left: 0;
+    margin-top: 13px;
+
+    color: white;
+    opacity: 0.8;
+    cursor: context-menu;
+    font-size: 1em;
+    font-family: 'Roboto mono';
+    transition: 0.3s ease-out;
+}
+
+.label-float input{
+    display: block;
+    width: 80%;
+    color: rgb(150, 150, 150);
+    font-family: 'Roboto mono';
+    margin-bottom: 8px;
+    
+    outline: none;
+    border: none;
+    border-bottom: 2px dashed #636363;
+    background: transparent;
+}
+
+.label-float input:focus{
+    border-bottom: 2px dashed #9e9e9e;
+}
+
+.label-float input:focus + label,
+.label-float input:valid + label{
+    margin-top: 0;
+    color: #ffffffa2;
+    font-size: 13px;
+}
+
+.fa-solid{
+    font-size: 13px;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.363);
+    position: absolute;
+    top: 16px;
+    right: 22%;
+}
+
+
+.btn{
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 55%;
+    max-width: 300px;
+    height: 40px;
+    line-height: 40px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.562);
+    cursor: pointer;
+    border: 0;
+    background-color: #181c22;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.795);
+    outline: none;
+}
+
+.btn-cadastro{
+    color: #e6c68c;
+}
+
+.btn-login{
+    color: #151419;
+    background-color: #e6c68c;
+}
+.btn-login:hover{ 
+    background-color: #eed4a4;
+}
+
+.btn-cadastro:hover{ background-color: #242931; transition: 0.1s;}
+
+
+
+
+
+
+
+
+
+
+
+/**** NavBar ****/
+.container{
+    margin: 0 auto;
+    max-width: 1080px;
+    position: relative;
+}
+
+header{
+    width: 100%;
+    height: 45px;
+    background-color: #181c22;
+    background-attachment: fixed;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.678);
+}
+
+header .tigerLogo{
+    width: 75px;
+    top: 13px;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+}
+
+header .navbar {
+    top: 0;
+    right: 17px;
+    position: absolute;
+}
+
+header .navbar ul{
+    display: inline-block;
+    list-style-type: none;
+}
+
+header .navbar a{ color: rgb(78, 78, 78); }
+header .navbar a:hover{ color: rgb(129, 129, 129);}
+
+header .navbar li{
+    float: left;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 0 15px;
+    line-height: 45px;
+    font-family: 'Roboto', sans-serif;
+}
+
+a#contaOuLog{
+    cursor: pointer;
+}
+
+li.atualPage{
+    height: 45px;
+    color: rgb(146 146 146) !important;
+    background-color: rgb(38, 43, 53);
+}
+
+header .navbar li img{
+    width: 25px;
+    top: 4px;
+    left: 0px;
+    position: relative;
+}
+
+
+
+
+
+
+
+/*** AlerBox ***/
+.alertBox{
+    display: none;
+
+    color: greenyellow;
+    line-height: 30px;
+    text-align: center;
+    position: absolute;
+    top: 65px;
+    left: 50%;
+    width: 80%;
+    height: 30px;
+    padding: 0 20px;
+    background-color: rgb(93, 139, 23);
+    transform: translateX(-50%);
+}

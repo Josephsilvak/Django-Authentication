@@ -1,0 +1,79 @@
+{% load static %}
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title>{%block 'titulo'%}Faça Log-in!{%endblock%}</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet"      type="text/css" href="{% static 'home/css/login.css' %}">
+        <link rel="stylesheet"      type="text/css" href="{% static 'home/css/normalize.css' %}">
+        <meta name="viewport"       content="width=device-width, initial-scale=1.0">
+        <meta name="author"         content="autor do site">
+        <meta name="keywords"       content="palavras-separadas,por,virgula">
+        <meta name="description"    content="descrição do site">
+        <link rel="icon" type="/" href="{% static 'home/img/icon.png' %}"/>
+        <!-- fontaawesome -->
+        <script src="https://kit.fontawesome.com/944a9ba2fe.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        {%block 'conteudo'%}
+            <main>
+
+                {% include 'partials/nav.html' %}
+                
+                <section>
+                    <div class="box log-left">
+                        <form action="{% url 'home:cadastrar' %}" method="POST">{% csrf_token %}
+                            <h2>Cadastre-se já!</h2>
+                            <div class="alertBox alertBoxCad"></div>
+
+                            <div class="cad-wrapper">
+                                <div class="label-float">
+                                    <input id="username" type="text" name="username" required>
+                                    <label id="usernameLabel" for="username">Username:</label>
+                                </div><!--label-float-->
+                                <div class="label-float">
+                                    <input id="email" type="text" name="email" required>
+                                    <label id="emailLabel" for="email">E-mail:</label>
+                                </div><!--label-float-->
+                                <div class="label-float">
+                                    <input id="senha" type="password" name="senha" required>
+                                    <label id="senhaLabel" for="senha">password:</label>
+                                    <i id="verSenha" class="fa-solid fa-eye-low-vision"></i>
+                                </div><!--label-float-->
+                                <div class="label-float">
+                                    <input id="senhaNv" type="password" name="senhaNv" required>
+                                    <label id="senhaNvLabel" for="senhaNv">password again:</label>
+                                    <i id="verSenhaNv" class="fa-solid fa-eye-low-vision"></i>
+                                </div><!--label-float-->
+                            </div><!--cad-wrapper-->
+                            <!--<button onclick="cadastrar()" class="btn btn-cadastro">Cadastrar</button>-->
+                            <input type="submit" onclick="cadastrar()" class="btn btn-cadastro" value="Cadastrar">
+                        </form>
+                    </div><!--log-left-->
+                    <div class="box log-right">
+                        <form  action="{% url 'home:entrar' %}" method="POST">{% csrf_token %}                           
+                            <h2>Faça Log-in</h2>
+                            <div class="alertBox alertBoxLog"></div>
+    
+                            <div class="cad-wrapper">
+                                <div class="label-float">
+                                    <input id="userLog" type="text" name="userLog" required>
+                                    <label id="userLogLabel" for="userLog">Username:</label>
+                                </div><!--label-float-->
+                                <div class="label-float">
+                                    <input id="senhaLog" type="password" name="senhaLog" required>
+                                    <label id="senhaLogLabel" for="senhaLog">password:</label>
+                                    <i id="verSenhaLog" class="fa-solid fa-eye-low-vision"></i>
+                                </div><!--label-float-->
+                            </div><!--cad-wrapper-->
+                            <!--<button onclick="entrar()" class="btn btn-login">Entrar</button>-->
+                            <input type="submit" onclick="entrar()" class="btn btn-login" value="Entrar">
+                        </form>
+                    </div><!--log-right-->
+                </section>
+            </main>
+        {%endblock%}
+    </body>
+    <!-- JavaScript -->
+    <script src="{% static 'home/script/script.js' %}"></script>
+</html>

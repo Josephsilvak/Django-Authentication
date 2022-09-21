@@ -1,0 +1,17 @@
+<header>
+    <div class="container">
+        <nav class="navbar">
+            <ul>
+
+                <a href="{% url 'home:index' %}"><li {%if atualIndex%}class="atualPage"{%endif%}>Home</li></a>
+
+                {% if user.is_authenticated %}
+                    <a href="{% url 'home:conta' %}"><li {%if atualConta%}class="atualPage"{%endif%}>Conta</li></a>
+                {% else %}
+                    <a href="{% url 'home:cadastrar' %}"><li {%if atualCad%}class="atualPage"{%endif%}>Login</li></a>
+                {% endif %}
+
+            </ul>
+        </nav><!--navbar-->
+    </div><!-- container-->
+</header>

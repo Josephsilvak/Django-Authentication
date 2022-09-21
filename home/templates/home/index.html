@@ -1,0 +1,26 @@
+{% load static %}
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title>{%block 'titulo'%}Hello, World!{%endblock%}</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet"      type="text/css" href="{% static 'home/css/index.css' %}">
+        <link rel="stylesheet"      type="text/css" href="{% static 'home/css/normalize.css' %}">
+        <meta name="viewport"       content="width=device-width, initial-scale=1.0">
+        <meta name="author"         content="autor do site">
+        <meta name="keywords"       content="palavras-separadas,por,virgula">
+        <meta name="description"    content="descrição do site">
+        <link rel="icon" type="/" href="{% static 'home/img/icon.png' %}"/>
+        <!-- fontaawesome -->
+        <script src="https://kit.fontawesome.com/944a9ba2fe.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        {%block 'conteudo'%}
+            {% include 'partials/nav.html' %}
+            
+            <div class="wrap">
+                <h2>Hello, World!</h2>
+            </div><!--wrap-->
+        {%endblock%}
+    </body>
+</html>
